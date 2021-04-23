@@ -1,0 +1,65 @@
+using System;
+
+
+
+namespace ConsoleApp8
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            var MI = new[,] { { 3, 5, -4 },
+
+                  { 2, -1, 0 },
+
+                  { 4, 9, 3 },
+
+                  { -11, -5, 91 } };
+
+           
+
+            // двовимірний масив розміром 3*4, тип елементів - char 
+
+
+
+            var MC = new[,] { { '1', '2', '3', '4' },
+
+                  { 'A', 'B', 'C', 'D' },
+
+                  { 'e', 'f', 'g', 'h' } };
+            
+
+            var MD = new[,] { { 0.2, 3.5 },
+
+                  { 3.3, -3.88 } };
+            
+
+            int i;
+
+            char c;
+
+            double d;
+
+
+
+            i = MI[2, 1]; // i = 9 
+
+            c = MC[0, 2]; // c = '3' 
+
+            d = MD[1, 0]; // d = 3.3 
+            Console.WriteLine(i);
+            Console.WriteLine(c);
+            Console.WriteLine(d);
+            Console.ReadKey();
+
+        }
+
+    }
+
+}
