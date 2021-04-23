@@ -1,0 +1,109 @@
+using System;
+
+
+
+namespace ConsoleApp8
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            // Обчислення кількості входжень заданого рядка в масиві рядків 
+
+            // 1. Оголошення змінних 
+
+            string[] AS; // масив рядків 
+
+            int count; // к-сть елементів у масиві 
+
+            string str; // рядок, кількість входжень якого обчислюється 
+
+            int n_occurs; // кількість входжень - результат 
+
+
+
+            // 2. Ввід рядка str 
+
+            Console.WriteLine("Enter string:");
+
+            str = Console.ReadLine();
+
+
+
+            // 3. Ввід кількості елементів в масиві 
+
+            Console.Write("count = ");
+
+            count = Convert.ToInt32(Console.ReadLine());
+
+
+
+            // 4. Перевірка, чи коректне значення count 
+
+            if (count <= 0)
+
+            {
+
+                Console.WriteLine("Error. The value of count is incorrect.");
+
+                Console.ReadLine();
+
+                return;
+
+            }
+
+
+
+            // 5. Виділення пам'яті для масиву рядків 
+
+            AS = new string[count];
+
+
+
+            // 6. Ввід масиву з клавіатури 
+
+            Console.WriteLine("Enter the array AS:");
+
+            for (int i = 0; i < AS.Length; i++)
+
+            {
+
+                Console.Write("AS[{0}] = ", i);
+
+                AS[i] = Console.ReadLine();
+
+            }
+
+
+
+            // 7. Підрахунок кількості входжень 
+
+            n_occurs = 0;
+
+            for (int i = 0; i < AS.Length; i++)
+
+                if (str == AS[i])
+
+                    n_occurs++;
+
+
+
+            // 8. Виведення результату 
+
+            Console.WriteLine("n_occurs = {0}", n_occurs);
+
+
+
+            Console.ReadKey();
+
+        }
+
+    }
+
+}
